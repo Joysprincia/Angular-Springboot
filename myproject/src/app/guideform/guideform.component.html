@@ -1,0 +1,45 @@
+
+<div class="front-box">
+    <form (ngSubmit)="onSubmit()">
+        <table align="center">
+            <tr><th colspan=2><h2><strong>Update Guide</strong></h2></th></tr>
+        <tr>
+        <th><h4>Guide Name</h4></th>
+        <td><input type="text" class="form-control" id="guidename" maxlength="30" [(ngModel)]="guides.g_name" name="pacakge_name"></td>
+        </tr>
+        
+        <tr>
+        <th><h4>Mobile</h4></th>
+        <td><input type="text" class="form-control" id="mobile" maxlength="50" [(ngModel)]="guides.g_mobile" name="place"></td>
+        </tr>
+        
+        <tr>
+        <th><h4>Address</h4></th>
+        <td><input type="text" class="form-control" id="address" maxlength="20" [(ngModel)]="guides.address" name="days_of_tour"></td>
+        </tr>
+        
+        <tr>
+        <th><h4>Experience</h4></th>
+        <td><input type="text" class="form-control" id="experience" maxlength="30" [(ngModel)]="guides.experience" name="package_price"></td>
+        </tr>  
+
+        <tr>
+            <th><h4>Date of Joining</h4></th>
+            <td><input type="text" class="form-control" id="dateofjoining" maxlength="20" [(ngModel)]="guides.g_doj" name="dateofjoining"></td>
+            </tr>
+            
+            <tr>
+            <th><h4>Status</h4></th>
+            <td><input type="text" class="form-control" id="status" maxlength="30" [(ngModel)]="guides.g_status" name="status"></td>
+            </tr>  
+        
+        <tr>
+        <td colspan=2 align="center">
+        <button class="button-2" type="submit" id="submitButton">Submit</button>
+        </td>
+        </tr>
+        
+        </table>
+        </form>
+        </div>
+<router-outlet></router-outlet>

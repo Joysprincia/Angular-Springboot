@@ -1,0 +1,30 @@
+<div class="front-box">
+    
+    <form (ngSubmit) = "onSubmit()">
+        <table align="center">
+        <tr><th colspan=2><h2 align="center"><strong>Login Form</strong></h2></th></tr><br/>
+        <tr>
+        <td><input type="text" class="form-control"  id="uname" maxlength="20" [(ngModel)] ="uname" name="uname" placeholder="Username"></td>
+        </tr>
+        <br/>
+        
+        <tr>
+        <td><input type="password" class="form-control" id="pwd" maxlength="30" [(ngModel)]="pwd" name="pwd" placeholder="Password"></td>
+        </tr><br/><br/>
+        
+        <tr>
+        <td colspan=2 align="center">
+        <button class="nav-link btn btn-secondary btn-md"><strong>Login</strong></button>
+        </td>
+        </tr>
+
+        <tr>
+            <td colspan=2 align="center">
+            {{error}}
+            </td>
+            </tr>
+        
+        </table>
+        </form>
+        </div>
+        <router-outlet></router-outlet>

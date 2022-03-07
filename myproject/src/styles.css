@@ -1,0 +1,383 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+
+@font-face {
+    font-family: lato;
+    src: url("assets/font/Lato-Italic.ttf") format("opentype");
+  }
+body{
+    overflow-x:hidden;
+    color:#505962;
+    font-family: 'Lato', sans-serif;
+}
+* {
+    font-family: 'Lato', sans-serif;
+}
+.homebody{
+    background-color:#eaebec ;
+}
+.offset:before{
+    height: 3.8rem;
+    margin: top -3.8rem;
+    content:"";
+    display:block;
+}
+/*--Navbar--*/
+.navbar{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    background:rgba(0, 0, 0, 0.6)!important;
+}
+.navbar-nav li{
+    padding-right:.7rem;
+}
+.navbar-dark .navbar-nav .nav-item .navbar-link{
+    color:white;
+    padding-top: .8rem;
+}
+
+#navbarRes ul li a:hover{
+    color: white;
+}
+.carousel-item img{
+    height:100vh;
+    width:100vw;  
+}
+.carousel-caption{
+    position:absolute;
+    top:38%;
+    text-transform: uppercase;
+    width: 100%;
+    right:0;
+    left:0;
+}
+.carousel-caption h1{
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    text-shadow: .1rem .1rem .8rem black;
+    padding-bottom: 1rem;
+}
+.carousel-caption h2{
+    font-size: 3.8rem;
+    font-weight: 500;
+    letter-spacing: .3rem;
+    text-shadow: .1rem .1rem .8rem black;
+    padding-bottom: 1rem;
+}
+.carousel-caption h3{
+    font-size: 2rem;
+    text-shadow: .1rem .1rem .5rem black;
+    padding-bottom: 1.6rem;
+}
+.btn-lg{
+    border-width: medium;
+    border-radius: 0;
+    font-size: 1.1rem;
+}
+.heading{
+    font-weight: 700;
+}
+#services .heading{
+    font-weight: 700;
+}
+
+#guides{
+    color:white;
+}
+
+#guides .name{
+    font-weight: 700;
+}
+#guides .Lang{
+    font-weight: 700;
+}
+.btn-md{
+    border-width: medium;
+    border-radius: 0;
+    padding: .6rem 1.1rem;
+    text-transform: uppercase;
+    margin:1rem;
+}
+.jumbotron{
+    border-radius: 0;
+    padding: 1rem 0 1rem;
+    background:rgba(0, 0, 0, 0.6)!important;
+    color:white;
+}
+.jumbotron h2{
+    font-weight: 700;
+    color:white;
+}
+.card{
+    margin: .5rem;
+}
+#places_card{
+    border-radius: 4px;
+    background: #eaebec;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    cursor: pointer;
+}
+
+#places_card:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+
+#row_id img{
+    height:300px;
+    width:500px;
+}
+
+#services img{
+    height:170px;
+}
+#service1{
+    border-radius: 25px;
+    color:white;
+    background: rgba(0, 0, 0, 0.6)!important;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+}
+#service1:hover{
+    transform: scale(1.05);
+ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+footer{
+    background-color: #40474e;
+    color:white;
+    padding:2rem 3rem;
+}
+footer img{
+    height:3rem;
+    
+}
+footer a{
+    color:white;
+}
+footer a i{
+    height:3rem;
+}
+footer svg.svg-inline--fa{
+    font-size: 1.6rem;
+    margin: 1.2 rem .5rem 0 0;
+}
+footer svg.svg-inline--fa:hover{
+    color:#14cfb0;
+}
+hr.socket{
+    border-top: .2rem solid #666b71;
+    width:100%;
+}
+
+.outer {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.8);
+    z-index:2; 
+    }
+
+    .inner-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    color:#2a2d30;
+    }
+
+    .close {
+    color: #2a2d30;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    }
+
+
+#out label {
+    font-weight: 700;
+}
+#out h3{
+    font-weight: 700;
+}
+#out legend{
+    font-weight: 700;
+}
+#gallery .row{
+    margin: 2rem;
+}
+.one{
+    height:250px;
+    width:400px;
+}
+.two{
+    height:600px;
+    width:400px;
+}
+#feed_form{
+    padding-top:5rem;
+}
+#places{
+    padding-bottom:75px;
+}
+.card-body{
+    padding-top: 2rem;
+}
+.inner-content {
+    background-image: linear-gradient(rgb(168, 166, 166),#f4f6f8);
+}
+#body_1 {
+    background-image: linear-gradient(grey,#f4f6f8);
+    color:#2a2d30;
+}
+
+.button-2 {
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color:black;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+  }
+  
+  .button-2:hover {
+    background: #F6F9FE;
+    color: #174ea6;
+  }
+  
+  .button-2:active {
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+  }
+  
+  .button-2:focus {
+    outline: none;
+    border: 2px solid #4285f4;
+  }
+  
+  .button-2:not(:disabled) {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  }
+  
+  .button-2:not(:disabled):hover {
+    box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+  }
+  
+  .button-2:not(:disabled):focus {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  }
+  
+  .button-2:not(:disabled):active {
+    box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+  }
+  
+  .button-2:disabled {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  }
+
+  .button-3 {
+    align-items: center;
+    appearance: none;
+    background-color: rgba(0, 0, 0, 0.6)!important;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color:#fff;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+  }
+  
+  .button-3:hover {
+    background: rgba(0, 0, 0, 0.6)!important;
+    color: #949597;
+  }
+  
+  .button-3:active {
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+  }
+
+  .bg-img{
+    background-image:url("/assets/images/commonbg.jpg");
+    filter: blur(8px);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+}
+
+body{
+    background-image:url("/assets/images/commonbg1.png");
+    height: 100vh;
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-attachment:fixed;
+}
+

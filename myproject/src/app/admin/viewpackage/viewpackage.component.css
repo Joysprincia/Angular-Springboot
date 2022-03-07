@@ -1,0 +1,29 @@
+th{
+    text-align:center;
+}
+*{
+    color:white;
+}
+
+table,td,th{
+    font-size:20px;
+    padding:15px;
+}
+
+table{
+    width:1000px;
+    background: rgba(0,0,0,.7);
+    position:absolute;
+    top:150px;
+    left:300px;
+    border-radius: 15px;
+}
+h1{
+    position:absolute;
+    top:68px;
+    left:700px; 
+}
+i{
+    color:white;
+}
+
