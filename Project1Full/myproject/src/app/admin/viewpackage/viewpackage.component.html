@@ -1,0 +1,29 @@
+<head>
+    <link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+  </head>
+<table class="table">
+    <thead>
+        <tr><td colspan="7" align-text='center'><h2><strong>Packages</strong></h2></td></tr>
+        <tr>
+        <th>Package Id</th>
+        <th>Package Name</th>
+        <th>Place</th>
+        <th>Days Of Tour</th>
+        <th>Package Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pack of packages">
+            <td>{{pack.p_id}}</td>
+            <td>{{pack.package_name}}</td>
+            <td>{{pack.place}}</td>
+            <td>{{pack.days_of_tour}}</td>
+            <td>{{pack.package_price}}</td>
+            <td ><button class="btn btn-success" (click)="updatePackage(pack.id)"><i class="fa fa-pencil-square fa-2x"></i></button></td>
+            <td ><button class="btn btn-danger" (click)="deletePackage(pack.id)"><i class="fa fa-trash fa-2x"></i></button></td>
+        </tr>
+    </tbody>
+</table>
+<router-outlet></router-outlet>

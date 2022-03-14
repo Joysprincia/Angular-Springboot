@@ -1,0 +1,27 @@
+
+<h1 id="heading"><strong>Package Details</strong></h1>
+  <div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let pack of packages">
+        <div class="rowpadding">    
+            <div id="products_card">
+                <div class="card-body">
+        <mat-card class="mat-elevation-z4">
+          <mat-card-header>
+            <mat-card-title class="cardhead"><h3>{{pack.package_name}}</h3></mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="{{pack.pictures}}">
+          <mat-card-content>
+                <table class="table">
+                    <tr><th>Package Id</th><td>{{pack.p_id}}</td></tr>
+                    <tr><th>Place</th><td>{{pack.place}}</td></tr>
+                    <tr><th>Days Of Tour</th><td>{{pack.days_of_tour}}</td></tr>
+                    <tr><th>Package Price</th><td>{{pack.package_price}}</td></tr>
+                </table>
+          </mat-card-content>
+        </mat-card>
+        </div></div></div>
+      </div>
+    </div>
+  </div>
+<router-outlet></router-outlet>

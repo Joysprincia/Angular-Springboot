@@ -1,0 +1,89 @@
+<div class="assignbox">
+    <div class="front-box">
+        
+    <form (ngSubmit) = "onSubmit()" >
+        <table align="center">
+        <tr><th colspan=2><h2 align="center"><strong>Update Assigned Guides</strong></h2></th></tr>
+        <tr>
+        <th><h5>Book Id</h5></th>
+        <td><input type="text" class="form-control" id="guideid" maxlength="20" autofocus [(ngModel)] ="assignguides.book_id" name="gid"></td>
+        </tr>
+        
+        <tr>
+            <th><h5>Package Details</h5></th>
+            <td>
+                        <label>Select Package Details</label>
+                        <select matNativeControl required name="myselect" [(ngModel)]="assignguides.package_details">
+                            <option>----Select----</option>
+                            <optgroup label="TAMILNADU" >
+                                <option>OOTY - 4 Nights / 5 Days - Rs. 11,000 per person</option>
+                                <option>CONOOR - 2 Nights / 3 Days - Rs. 4500 per person</option>
+                            </optgroup>
+                            <optgroup label="KERALA" >
+                                <option>ALLEPPEY - 2 Nights / 3 Days - Rs. 9,900 per person</option>
+                                <option>WAYANAD -  2 Nights / 3 Days - Rs. 9,000 per person</option>
+                                <option>HOUSEBOAT KERALA - 5 Nights / 6 Days - Rs. 12,500 per person</option>
+                                <option>MUNNAR BACKWATER - 3 Nights / 4 Days - Rs. 9000 per person</option>
+                                <option>MUNNAR - 2 Nights / 3 Days - Rs. 5300 per person</option>
+                                <option>SHORT KERALA TOUR - 2 Nights / 3 Days - Rs. 5900 per person</option>
+                            </optgroup>
+                            <optgroup label="ANDHRA PRADESH" >
+                                <option>HYDERABAD - 2 Nights / 3 Days - Rs. 7,500 per person</option>
+                            </optgroup>
+                            <optgroup label="CHANDIGARH" >
+                                <option>CHANDIGARH-MANALI - 3 Nights / 4 Days - Rs. 9,200 per person</option>
+                            </optgroup>
+                            <optgroup label="KARNATAKA" >
+                                <option>COORG MYSORE - 3 Nights / 4 Days - Rs. 13,500 per person</option>
+                            </optgroup>
+                            <optgroup label="GOA" >
+                                <option>GOA - 2 Nights / 3 Days - Rs. 8,900 per person</option>
+                            </optgroup>
+                        </select>
+                
+            </td>           
+            </tr>
+        
+        <tr>
+        <th><h5>Traveller Id</h5></th>
+        <td><input type="text" class="form-control" id="mobileno" maxlength="50" [(ngModel)]="assignguides.traveller_id" name="gmobile"></td>
+        </tr>
+        
+        <tr>
+        <th><h5>Traveller Name</h5></th>
+        <td><input type="text" class="form-control" id="address" maxlength="20" [(ngModel)]="assignguides.traveller_name" name="address"></td>
+        </tr>
+        
+        <tr>
+        <th><h5>Traveller Mobile</h5></th>
+        <td><input type="text" class="form-control" id="experience" maxlength="30" [(ngModel)]="assignguides.traveller_mobile" name="experience"></td>
+        </tr>
+    
+        <tr>
+            <th><h5>Guide Id</h5></th>
+            <td><input type="text" class="form-control" id="desig" maxlength="30" [(ngModel)]="assignguides.g_id" name="desig"></td>
+        </tr>
+            
+        <tr>
+            <th><h5>Guide Name</h5></th>
+            <td><input type="text" class="form-control" id="lang_known" maxlength="30" [(ngModel)]="assignguides.g_name" name="lang_known"></td>
+        </tr>
+        
+        <tr>
+            <th><h5>Guide Mobile</h5></th>
+            <td><input type="text" class="form-control" id="descr" maxlength="30" [(ngModel)]="assignguides.g_mobile" name="descr"></td>
+        </tr>
+        
+        <tr>
+        <td colspan=2 align="center">
+        <button class="button-2" type="submit" id="submitButton">Submit</button>
+        </td>
+        </tr>
+        
+        </table>
+        </form>
+        </div>
+        </div>
+        
+<router-outlet></router-outlet>
+

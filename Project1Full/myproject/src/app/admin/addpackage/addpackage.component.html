@@ -1,0 +1,45 @@
+<div class="front-box">
+    
+<form (ngSubmit) = "onSubmit()">
+    <table align="center">
+    <tr><th colspan=2><h2 align="center"><strong>Add Package</strong></h2></th></tr>
+    <tr>
+    <td><h4>Package Id</h4></td>
+    <td><input type="text" class="form-control" id="packageid" maxlength="20" autofocus [(ngModel)] ="packages.p_id" name="pid"></td>
+    </tr>
+    
+    <tr>
+    <td><h4>Package Name</h4></td>
+    <td><input type="text" class="form-control" id="packagename" maxlength="30" [(ngModel)]="packages.package_name" name="pacakgename"></td>
+    </tr>
+    
+    <tr>
+    <td><h4>Place</h4></td>
+    <td><input type="text" class="form-control" id="place" maxlength="50" [(ngModel)]="packages.place" name="place"></td>
+    </tr>
+    
+    <tr>
+    <td><h4>Days Of Tour</h4></td>
+    <td><input type="text" class="form-control" id="daysoftour" maxlength="20" [(ngModel)]="packages.days_of_tour" name="daysoftour"></td>
+    </tr>
+    
+    <tr>
+    <td><h4>Price</h4></td>
+    <td><input type="text" class="form-control" id="price" maxlength="30" [(ngModel)]="packages.package_price" name="packageprice"></td>
+    </tr> 
+    
+    <tr>
+        <td><h4>Image Link</h4></td>
+        <td><input type="text" class="form-control" id="pictures" maxlength="30" [(ngModel)]="packages.pictures" name="pictures"></td>
+    </tr> 
+    
+    <tr>
+    <td colspan=2 align="center">
+    <button class="button-2" type="submit" id="submitButton">Submit</button>
+    </td>
+    </tr>
+    
+    </table>
+    </form>
+    </div>
+    <router-outlet></router-outlet>

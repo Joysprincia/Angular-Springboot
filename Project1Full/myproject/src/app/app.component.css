@@ -1,0 +1,73 @@
+body{
+    overflow-x:hidden;
+    font-family: 'Lato', sans-serif;
+    background-color:#eaebec ;
+    color:#505962
+}
+.offset:before{
+    height: 3.8rem;
+    margin: top -3.8rem;
+    content:"";
+    display:block;
+}
+/*--Navbar--*/
+.navbar{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    background:rgba(0, 0, 0, 0.6)!important;
+}
+.navbar-nav li{
+    padding-right:.7rem;
+}
+.navbar-dark .navbar-nav .nav-item .navbar-link{
+    color:white;
+    padding-top: .8rem;
+}
+
+#navbarRes ul li a:hover{
+    color: white;
+}
+.carousel-item img{
+    height:100vh;
+    width:100vw;  
+}
+.carousel-caption{
+    position:absolute;
+    top:38%;
+    text-transform: uppercase;
+    width: 100%;
+    right:0;
+    left:0;
+}
+.carousel-caption h1{
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    text-shadow: .1rem .1rem .8rem black;
+    padding-bottom: 1rem;
+}
+.carousel-caption h2{
+    font-size: 3.8rem;
+    font-weight: 500;
+    letter-spacing: .3rem;
+    text-shadow: .1rem .1rem .8rem black;
+    padding-bottom: 1rem;
+}
+.carousel-caption h3{
+    font-size: 2rem;
+    text-shadow: .1rem .1rem .5rem black;
+    padding-bottom: 1.6rem;
+}
+.btn-lg{
+    border-width: medium;
+    border-radius: 0;
+    font-size: 1.1rem;
+}
+.heading{
+    font-weight: 700;
+}
+
+
+

@@ -1,0 +1,112 @@
+<div class="box">
+    <div class="front-box">
+        
+    <form (ngSubmit) = "onSubmit()">
+        <table align="center">
+        <tr><th colspan=2><h2 align="center"><strong>Booking Form</strong></h2></th></tr>
+        <tr>
+        <th><h5>Name</h5></th>
+        <td><input type="text" class="form-control" id="name" maxlength="20" autofocus [(ngModel)] ="books.name" name="name"></td>
+        </tr>
+        
+        <tr>
+        <th><h5>Mobile No</h5></th>
+        <td><input type="text" class="form-control" id="mobile" maxlength="30" [(ngModel)]="books.mobile" name="mobile"></td>
+        </tr>
+
+        <tr>
+            <th><h5>Place</h5></th>
+            <td><input type="text" class="form-control" id="place_from" maxlength="30" [(ngModel)]="books.place_from" name="place_from"></td>
+        </tr>
+        
+        <tr>
+        <th><h5>Traveller Id</h5></th>
+        <td>
+            <label>Type the id appearing in the text box</label>
+            <input type="text" class="form-control" id="travellerid" maxlength="50" [(ngModel)]="books.cust_id" placeholder="{{id}}" name="travellerid"></td>
+        </tr>
+        
+        <tr>
+        <th><h5>Package Details</h5></th>
+        <td><div col-md-6>
+                    <label>Select Package Details</label>
+                    <select matNativeControl required name="myselect" [(ngModel)]="books.package_details">
+                        <option>----Select----</option>
+                        <optgroup label="TAMILNADU" >
+                            <option>OOTY - 4 Nights / 5 Days - Rs. 11,000 per person</option>
+                            <option>CONOOR - 2 Nights / 3 Days - Rs. 4500 per person</option>
+                        </optgroup>
+                        <optgroup label="KERALA" >
+                            <option>ALLEPPEY - 2 Nights / 3 Days - Rs. 9,900 per person</option>
+                            <option>WAYANAD -  2 Nights / 3 Days - Rs. 9,000 per person</option>
+                            <option>HOUSEBOAT KERALA - 5 Nights / 6 Days - Rs. 12,500 per person</option>
+                            <option>MUNNAR BACKWATER - 3 Nights / 4 Days - Rs. 9000 per person</option>
+                            <option>MUNNAR - 2 Nights / 3 Days - Rs. 5300 per person</option>
+                            <option>SHORT KERALA TOUR - 2 Nights / 3 Days - Rs. 5900 per person</option>
+                        </optgroup>
+                        <optgroup label="ANDHRA PRADESH" >
+                            <option>HYDERABAD - 2 Nights / 3 Days - Rs. 7,500 per person</option>
+                        </optgroup>
+                        <optgroup label="CHANDIGARH" >
+                            <option>CHANDIGARH-MANALI - 3 Nights / 4 Days - Rs. 9,200 per person</option>
+                        </optgroup>
+                        <optgroup label="KARNATAKA" >
+                            <option>COORG MYSORE - 3 Nights / 4 Days - Rs. 13,500 per person</option>
+                        </optgroup>
+                        <optgroup label="GOA" >
+                            <option>GOA - 2 Nights / 3 Days - Rs. 8,900 per person</option>
+                        </optgroup>
+                    </select>
+            </div>
+        </td>           
+        </tr>
+        
+        <tr>
+        <th><h5>Date Of Tour</h5></th>
+        <td><input type="text" class="form-control" id="date_of_tour" maxlength="30" [(ngModel)]="books.date_of_tour" name="date_of_tour"></td>
+        </tr>
+    
+        <tr>
+            <th><h5>No.of Adults</h5></th>
+            <td><input type="text" class="form-control" id="adults" maxlength="30" [(ngModel)]="books.adults" name="adults"></td>
+        </tr>
+            
+        <tr>
+            <th><h5>No.of Kids</h5></th>
+            <td><input type="text" class="form-control" id="kids" maxlength="30" [(ngModel)]="books.kids" name="kids"></td>
+        </tr>
+        
+        <tr>
+            <th><h5>Traveller Details</h5><h6>(Name-Age-Place)</h6></th>
+            <td><textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="trevellerdetails" [(ngModel)]="books.traveller_details"></textarea></td>
+        </tr>
+
+        <tr>
+            <th><h5>No.of Rooms</h5></th>
+            <td><input type="text" class="form-control" id="no_of_rooms" maxlength="30" [(ngModel)]="books.no_of_rooms" name="no_of_rooms"></td>
+        </tr>
+
+        <tr>
+            <th><h5>Guide Necessity</h5></th>
+            <td>
+                    <select matNativeControl required name="myselect" [(ngModel)]="books.guide_necessity">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+              </td>
+        </tr>
+        
+        <tr>
+        <td colspan=2 align="center">
+        <button class="button-2" type="submit" id="submitButton">Submit</button>
+        </td>
+        </tr>
+        
+        </table>
+        </form>
+        </div>
+        </div>
+        <router-outlet></router-outlet>
+    
+    
+

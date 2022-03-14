@@ -1,0 +1,24 @@
+<!--Team-->
+<h1 id="heading"><strong>Our Guides</strong></h1>
+<h3 id="headdes">We have the Best Guides to make your tour awesome.</h3>
+  <div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let guide of guides">
+        <div class="rowpadding">    
+            <div id="products_card">
+                <div class="card-body">
+        <mat-card class="mat-elevation-z4">
+            <table>
+          <mat-card-content>
+                <tr><td colspan="2"><div class="c0">{{guide.g_name}}</div></td></tr>
+                <tr class="c1"><td colspan="2">{{guide.desig}}, {{guide.experience}} of Experience</td></tr>
+                <tr class="c2"><td colspan="2">{{guide.descr}}</td></tr>
+                <tr class="c3"><td>Languages known :</td><td><div class="lang">{{guide.lang_known}}</div></td></tr>    
+          </mat-card-content>
+        </table>
+        </mat-card>
+        </div></div></div>
+      </div>
+    </div>
+  </div>
+<router-outlet></router-outlet>

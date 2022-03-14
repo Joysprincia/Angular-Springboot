@@ -1,0 +1,35 @@
+<head>
+    <link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+  </head>
+<div class="bookingdetails">
+<table class="table">
+    <thead>
+        <tr><td colspan="9" align-text='center'><h2><strong>Booking Details</strong></h2></td></tr>
+        <tr>
+        <th>Booking Id</th>
+        <th>Traveller Id</th>
+        <th>Traveller Name</th>
+        <th>Mobile No</th>
+        <th>Package Details</th>
+        <th>Date Of Tour</th>
+        <th>Guide Assign Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let book of books">
+            <td>{{book.book_id}}</td>
+            <td>{{book.cust_id}}</td>
+            <td>{{book.name}}</td>
+            <td>{{book.mobile}}</td>
+            <td>{{book.package_details}}</td>
+            <td>{{book.date_of_tour}}</td>
+            <td>{{book.guide_assign_status}}</td>
+            <td ><button class="btn btn-success" (click)="updateBooking(book.book_id)"><i class="fa fa-pencil-square fa-2x"></i></button></td>
+            <td ><button class="btn btn-danger" (click)="deleteBooking(book.book_id)"><i class="fa fa-trash fa-2x"></i></button></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<router-outlet></router-outlet>

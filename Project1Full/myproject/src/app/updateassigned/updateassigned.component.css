@@ -1,0 +1,58 @@
+*{
+    color:white;
+}
+
+.front-box {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 700px;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.7);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  th{
+    text-align:left;
+    width:200px;
+}
+
+input ,textarea{
+  width: 350px;
+  padding: 6px 6px;
+  margin: 3px 0;
+  box-sizing: border-box;
+  color:black;
+  font-size: 16px;
+}
+td{
+    padding-left:30px;
+    padding-bottom:8px;
+}
+th{
+    padding-left:20px;
+    padding-bottom:10px;
+}
+#submitButton{
+    color:black;
+}
+
+option , optgroup{
+    background-color:#36454F;
+    color:white;
+    width: 600px;
+    font-size:16px;
+}
+select{
+  width: 350px;
+  padding: 6px 6px;
+  margin: 3px 0;
+  box-sizing: border-box;
+  color:black;
+  font-size: 16px;
+}   
+
+
+

@@ -1,0 +1,33 @@
+<head>
+    <link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+  </head>
+<table class="table">
+    <thead>
+        <tr><td colspan="9" align-text='center'><h2><strong>Guide Details</strong></h2></td></tr>
+        <tr>
+        <th>Guide Id</th>
+        <th>Guide Name</th>
+        <th>Mobile No</th>
+        <th>Address</th>
+        <th>Experience</th>
+        <th>Date Of Joining</th>
+        <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let guide of guides">
+            <td>{{guide.g_id}}</td>
+            <td>{{guide.g_name}}</td>
+            <td>{{guide.g_mobile}}</td>
+            <td>{{guide.address}}</td>
+            <td>{{guide.experience}}</td>
+            <td>{{guide.g_doj}}</td>
+            <td>{{guide.g_status}}</td>
+            <td ><button class="btn btn-success" (click)="updateGuide(guide.id)"><i class="fa fa-pencil-square fa-2x"></i></button></td>
+            <td ><button class="btn btn-danger" (click)="deleteGuide(guide.id)"><i class="fa fa-trash fa-2x"></i></button></td>
+        </tr>
+    </tbody>
+</table>
+<router-outlet></router-outlet>
