@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router,NavigationExtras } from '@angular/router';
 import { LoginformserviceService } from '../loginformservice.service';
 import { Users } from '../Users';
 
@@ -19,24 +19,26 @@ export class FormloginComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
-  username!:string;
   error!:string;
+  id!:number;
 
   onSubmit(){
     this.service.getUsers(this.uname,this.pwd).subscribe(data => {
       this.users=data; 
       this.role=this.users.map((t: { roles: any; })=>t.roles);
-      console.log(this.role); 
+      this.id=this.users.map((s:{id:number})=>s.id);
+      console.log(this.role);
+      console.log(this.id); 
       if(this.role=='ADMIN'){
         console.log('logged in successfully');
         this.gotoAdminpage();
       }
       else if(this.role=='TRAVELLER'){
-        
+        this.service.setId(this.id);
+        this.router.navigate(['/bookingform']);
       }
       else{
-        this.error='Wrong username and password';
+        this.error='Wrong username or password';
       }
     });
   }
@@ -45,6 +47,9 @@ export class FormloginComponent implements OnInit {
     this.router.navigate(['/admin']);
   }
 
+  gotoTravellerpage(){
+    
+  }
   gotoErrorpage(){
     this.router.navigate([])
   }

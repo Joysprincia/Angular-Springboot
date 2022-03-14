@@ -4,34 +4,54 @@
         <table align="center">
             <tr><th colspan=2><h2><strong>Update Guide</strong></h2></th></tr>
         <tr>
-        <th><h4>Guide Name</h4></th>
+        <th><h5>Guide Name</h5></th>
         <td><input type="text" class="form-control" id="guidename" maxlength="30" [(ngModel)]="guides.g_name" name="pacakge_name"></td>
         </tr>
         
         <tr>
-        <th><h4>Mobile</h4></th>
+        <th><h5>Mobile</h5></th>
         <td><input type="text" class="form-control" id="mobile" maxlength="50" [(ngModel)]="guides.g_mobile" name="place"></td>
         </tr>
         
         <tr>
-        <th><h4>Address</h4></th>
+        <th><h5>Address</h5></th>
         <td><input type="text" class="form-control" id="address" maxlength="20" [(ngModel)]="guides.address" name="days_of_tour"></td>
         </tr>
         
         <tr>
-        <th><h4>Experience</h4></th>
+        <th><h5>Experience</h5></th>
         <td><input type="text" class="form-control" id="experience" maxlength="30" [(ngModel)]="guides.experience" name="package_price"></td>
-        </tr>  
+        </tr> 
+        
+        <tr>
+            <th><h5>Designation</h5></th>
+            <td><input type="text" class="form-control" id="desig" maxlength="30" [(ngModel)]="guides.desig" name="desig"></td>
+        </tr>
+            
+        <tr>
+            <th><h5>Languages Known</h5></th>
+            <td><input type="text" class="form-control" id="lang_known" maxlength="30" [(ngModel)]="guides.lang_known" name="lang_known"></td>
+        </tr>
+        
+        <tr>
+            <th><h5>Description</h5></th>
+            <td><input type="text" class="form-control" id="descr" maxlength="30" [(ngModel)]="guides.descr" name="descr"></td>
+        </tr>
 
         <tr>
-            <th><h4>Date of Joining</h4></th>
+            <th><h5>Date of Joining</h5></th>
             <td><input type="text" class="form-control" id="dateofjoining" maxlength="20" [(ngModel)]="guides.g_doj" name="dateofjoining"></td>
-            </tr>
-            
-            <tr>
-            <th><h4>Status</h4></th>
-            <td><input type="text" class="form-control" id="status" maxlength="30" [(ngModel)]="guides.g_status" name="status"></td>
-            </tr>  
+        </tr>
+
+        <tr>
+            <th><h5>Guide Status</h5></th>
+            <td>
+                    <select matNativeControl required name="statusSelect" [(ngModel)]="guides.g_status">
+                        <option value="available">Available</option>
+                        <option value="assigned">Assigned</option>
+                    </select>
+              </td>
+        </tr>
         
         <tr>
         <td colspan=2 align="center">

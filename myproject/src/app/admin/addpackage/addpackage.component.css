@@ -28,10 +28,10 @@ input {
 }
 td{
     padding-left:30px;
-    padding-bottom:10px;
+    padding-bottom:5px;
 }
 th{
-    padding-bottom:15px;
+    padding-bottom:8px;
 }
 #submitButton{
     color:black;

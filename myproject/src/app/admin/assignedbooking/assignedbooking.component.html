@@ -1,0 +1,38 @@
+<head>
+    <link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+  </head>
+<div class="bookingdetails">
+<table class="table">
+    <thead>
+        <tr><td colspan="10" align-text='center'><h2><strong>Guides Assigned Details</strong></h2></td></tr>
+        <tr>
+        <th>Booking Id</th>
+        <th>Package Details</th>
+        <th>Traveller Id</th>
+        <th>Traveller Name</th>
+        <th>Travller Mobile no</th>
+        <th>Guide Id</th>
+        <th>Guide Name</th>
+        <th>Guide Mobile no</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let assign of assignguides">
+            <td>{{assign.book_id}}</td>
+            <td>{{assign.package_details}}</td>
+            <td>{{assign.traveller_id}}</td>
+            <td>{{assign.traveller_name}}</td>
+            <td>{{assign.traveller_mobile}}</td>
+            <td>{{assign.g_id}}</td>
+            <td>{{assign.g_name}}</td>
+            <td>{{assign.g_mobile}}</td>
+            <td ><button class="btn btn-success" (click)="updateAssigned(assign.ag_id)"><i class="fa fa-pencil-square fa-2x"></i></button></td>
+            <td ><button class="btn btn-danger" (click)="deleteAssigned(assign.ag_id)"><i class="fa fa-trash fa-2x"></i></button></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<router-outlet></router-outlet>
+

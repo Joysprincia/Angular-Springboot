@@ -1,0 +1,68 @@
+<div class="box">
+    <div class="front-box">
+        
+    <form (ngSubmit) = "onSubmit()">
+        <table align="center">
+        <tr><th colspan=2><h2 align="center"><strong>SignUp Form</strong></h2></th></tr>
+        <tr>
+        <th><h5>Name</h5></th>
+        <td><input type="text" class="form-control" id="cname" maxlength="20" autofocus [(ngModel)] ="users.c_name" name="cname"></td>
+        </tr>
+        
+        <tr>
+        <th><h5>Mobile No</h5></th>
+        <td><input type="text" class="form-control" id="mobileno" maxlength="30" [(ngModel)]="users.mobile" name="mobileno"></td>
+        </tr>
+        
+        <tr>
+        <th><h5>Email Id</h5></th>
+        <td><input type="email" class="form-control" id="emailid" maxlength="50" [(ngModel)]="users.email" name="emailid"></td>
+        </tr>
+        
+        <tr>
+        <th><h5>Address</h5></th>
+        <td><input type="text" class="form-control" id="address" maxlength="20" [(ngModel)]="users.address" name="address"></td>
+        </tr>
+        
+        <tr>
+        <th><h5>District</h5></th>
+        <td><input type="text" class="form-control" id="district" maxlength="30" [(ngModel)]="users.district" name="district"></td>
+        </tr>
+    
+        <tr>
+            <th><h5>State</h5></th>
+            <td><input type="text" class="form-control" id="state" maxlength="30" [(ngModel)]="users.state" name="state"></td>
+        </tr>
+            
+        <tr>
+            <th><h5>Username</h5></th>
+            <td><input type="text" class="form-control" id="username" maxlength="30" [(ngModel)]="users.uname" name="username"></td>
+        </tr>
+        
+        <tr>
+            <th><h5>Password</h5></th>
+            <td><input type="text" class="form-control" id="password" maxlength="30" [(ngModel)]="users.pwd" name="password"></td>
+        </tr>
+        
+        <tr>
+            <th><h5>Role</h5></th>
+            <td>
+                    <select matNativeControl required name="myselect" [(ngModel)]="users.roles">
+                        <option value="TRAVELLER">TRAVELLER</option>
+                    </select>
+              </td>
+        </tr>
+        
+        <tr>
+        <td colspan=2 align="center">
+        <button class="button-2" type="submit" id="submitButton">Submit</button>
+        </td>
+        </tr>
+        
+        </table>
+        </form>
+        </div>
+        </div>
+        <router-outlet></router-outlet>
+    
+    

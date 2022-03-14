@@ -5,4 +5,5 @@ export class Package1 {
     days_of_tour!: string;
     package_price!: string;
     id!: number;
+    pictures!:string;
 }

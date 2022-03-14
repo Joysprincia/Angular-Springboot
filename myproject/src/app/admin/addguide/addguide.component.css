@@ -4,7 +4,7 @@
 
 .front-box {
     position: absolute;
-    top: 52%;
+    top: 68%;
     left: 58%;
     width: 700px;
     padding: 10px;
@@ -32,7 +32,7 @@ td{
     padding-bottom:8px;
 }
 th{
-    padding-bottom:15px;
+    padding-bottom:10px;
 }
 #submitButton{
     color:black;

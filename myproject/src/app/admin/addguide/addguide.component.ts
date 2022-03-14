@@ -19,6 +19,7 @@ export class AddguideComponent implements OnInit {
   saveGuide(){
     this.service.addGuide(this.guides).subscribe(data=>{
       console.log(data);
+      this.router.navigate(['team']);
     },
     error=>console.log(error));
   }

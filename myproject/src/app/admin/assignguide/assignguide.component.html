@@ -1,0 +1,148 @@
+<head>
+    <link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+  </head>
+<div class="bookingdetails">
+<table class="table">
+    <thead>
+        <tr><td colspan="9" align-text='center'><h2><strong>Booking Details</strong></h2></td></tr>
+        <tr>
+        <th>Booking Id</th>
+        <th>Traveller Id</th>
+        <th>Traveller Name</th>
+        <th>Mobile No</th>
+        <th>Package Details</th>
+        <th>Date Of Tour</th>
+        <th>Guide Assign Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let book of books">
+            <td>{{book.book_id}}</td>
+            <td>{{book.cust_id}}</td>
+            <td>{{book.name}}</td>
+            <td>{{book.mobile}}</td>
+            <td>{{book.package_details}}</td>
+            <td>{{book.date_of_tour}}</td>
+            <td>{{book.guide_assign_status}}</td>
+            <td ><button class="btn btn-success" (click)="updateBooking(book.book_id)"><i class="fa fa-pencil-square fa-2x"></i></button></td>
+            <td ><button class="btn btn-danger" (click)="deleteBooking(book.book_id)"><i class="fa fa-trash fa-2x"></i></button></td>
+        </tr>
+    </tbody>
+</table>
+</div><br>
+
+<div class="guidedetails">
+<table class="table">
+    <thead>
+        <tr><td colspan="6" align-text='center'><h2><strong>Guides Available</strong></h2></td></tr>
+        <tr>
+        <th>Guide Id</th>
+        <th>Guide Name</th>
+        <th>Mobile No</th>
+        <th>Address</th>
+        <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let guide of guides">
+            <td>{{guide.g_id}}</td>
+            <td>{{guide.g_name}}</td>
+            <td>{{guide.g_mobile}}</td>
+            <td>{{guide.address}}</td>
+            <td>{{guide.g_status}}</td>
+            <td ><button class="btn btn-success" (click)="updateGuide(guide.id)"><i class="fa fa-pencil-square fa-2x"></i></button></td>
+        </tr>
+    </tbody>
+</table>
+</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="assignbox">
+    <div class="front-box">
+        
+    <form (ngSubmit) = "onSubmit()" >
+        <table align="center">
+        <tr><th colspan=2><h2 align="center"><strong>Guide Assigning Form</strong></h2></th></tr>
+        <tr>
+        <th><h5>Book Id</h5></th>
+        <td><input type="text" class="form-control" id="guideid" maxlength="20" autofocus [(ngModel)] ="assignguides.book_id" name="gid"></td>
+        </tr>
+        
+        <tr>
+            <th><h5>Package Details</h5></th>
+            <td>
+                        <label>Select Package Details</label>
+                        <select matNativeControl required name="myselect" [(ngModel)]="assignguides.package_details">
+                            <option>----Select----</option>
+                            <optgroup label="TAMILNADU" >
+                                <option>OOTY - 4 Nights / 5 Days - Rs. 11,000 per person</option>
+                                <option>CONOOR - 2 Nights / 3 Days - Rs. 4500 per person</option>
+                            </optgroup>
+                            <optgroup label="KERALA" >
+                                <option>ALLEPPEY - 2 Nights / 3 Days - Rs. 9,900 per person</option>
+                                <option>WAYANAD -  2 Nights / 3 Days - Rs. 9,000 per person</option>
+                                <option>HOUSEBOAT KERALA - 5 Nights / 6 Days - Rs. 12,500 per person</option>
+                                <option>MUNNAR BACKWATER - 3 Nights / 4 Days - Rs. 9000 per person</option>
+                                <option>MUNNAR - 2 Nights / 3 Days - Rs. 5300 per person</option>
+                                <option>SHORT KERALA TOUR - 2 Nights / 3 Days - Rs. 5900 per person</option>
+                            </optgroup>
+                            <optgroup label="ANDHRA PRADESH" >
+                                <option>HYDERABAD - 2 Nights / 3 Days - Rs. 7,500 per person</option>
+                            </optgroup>
+                            <optgroup label="CHANDIGARH" >
+                                <option>CHANDIGARH-MANALI - 3 Nights / 4 Days - Rs. 9,200 per person</option>
+                            </optgroup>
+                            <optgroup label="KARNATAKA" >
+                                <option>COORG MYSORE - 3 Nights / 4 Days - Rs. 13,500 per person</option>
+                            </optgroup>
+                            <optgroup label="GOA" >
+                                <option>GOA - 2 Nights / 3 Days - Rs. 8,900 per person</option>
+                            </optgroup>
+                        </select>
+                
+            </td>           
+            </tr>
+        
+        <tr>
+        <th><h5>Traveller Id</h5></th>
+        <td><input type="text" class="form-control" id="mobileno" maxlength="50" [(ngModel)]="assignguides.traveller_id" name="gmobile"></td>
+        </tr>
+        
+        <tr>
+        <th><h5>Traveller Name</h5></th>
+        <td><input type="text" class="form-control" id="address" maxlength="20" [(ngModel)]="assignguides.traveller_name" name="address"></td>
+        </tr>
+        
+        <tr>
+        <th><h5>Traveller Mobile</h5></th>
+        <td><input type="text" class="form-control" id="experience" maxlength="30" [(ngModel)]="assignguides.traveller_mobile" name="experience"></td>
+        </tr>
+    
+        <tr>
+            <th><h5>Guide Id</h5></th>
+            <td><input type="text" class="form-control" id="desig" maxlength="30" [(ngModel)]="assignguides.g_id" name="desig"></td>
+        </tr>
+            
+        <tr>
+            <th><h5>Guide Name</h5></th>
+            <td><input type="text" class="form-control" id="lang_known" maxlength="30" [(ngModel)]="assignguides.g_name" name="lang_known"></td>
+        </tr>
+        
+        <tr>
+            <th><h5>Guide Mobile</h5></th>
+            <td><input type="text" class="form-control" id="descr" maxlength="30" [(ngModel)]="assignguides.g_mobile" name="descr"></td>
+        </tr>
+        
+        <tr>
+        <td colspan=2 align="center">
+        <button class="button-2" type="submit" id="submitButton">Submit</button>
+        </td>
+        </tr>
+        
+        </table>
+        </form>
+        </div>
+        </div>
+        
+<router-outlet></router-outlet>

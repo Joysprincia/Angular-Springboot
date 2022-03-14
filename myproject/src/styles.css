@@ -16,6 +16,9 @@ body{
 .homebody{
     background-color:#eaebec ;
 }
+.gallerybody{
+    background-color:#eaebec !important;
+}
 .offset:before{
     height: 3.8rem;
     margin: top -3.8rem;
@@ -239,9 +242,7 @@ hr.socket{
 #places{
     padding-bottom:75px;
 }
-.card-body{
-    padding-top: 2rem;
-}
+
 .inner-content {
     background-image: linear-gradient(rgb(168, 166, 166),#f4f6f8);
 }
@@ -361,16 +362,6 @@ hr.socket{
     box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
     outline: none;
   }
-
-  .bg-img{
-    background-image:url("/assets/images/commonbg.jpg");
-    filter: blur(8px);
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment:fixed;
-}
 
 body{
     background-image:url("/assets/images/commonbg1.png");

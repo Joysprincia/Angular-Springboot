@@ -4,22 +4,23 @@
         <table align="center">
         <tr><th colspan=2><h2 align="center"><strong>Login Form</strong></h2></th></tr><br/>
         <tr>
-        <td><input type="text" class="form-control"  id="uname" maxlength="20" [(ngModel)] ="uname" name="uname" placeholder="Username"></td>
+        <td><input type="text" class="form-control"  id="uname" maxlength="20" [(ngModel)] ="uname" name="uname" placeholder="Username" required></td>
         </tr>
         <br/>
         
         <tr>
-        <td><input type="password" class="form-control" id="pwd" maxlength="30" [(ngModel)]="pwd" name="pwd" placeholder="Password"></td>
+        <td><input type="password" class="form-control" id="pwd" maxlength="30" [(ngModel)]="pwd" name="pwd" placeholder="Password" required></td>
         </tr><br/><br/>
         
         <tr>
         <td colspan=2 align="center">
-        <button class="nav-link btn btn-secondary btn-md"><strong>Login</strong></button>
+        <button id="loginbutton" class="nav-link btn btn-secondary btn-md"><strong>Login</strong></button>
+        <a href="signup">New User?</a>
         </td>
         </tr>
 
         <tr>
-            <td colspan=2 align="center">
+            <td colspan=2 align="center" id="error">
             {{error}}
             </td>
             </tr>

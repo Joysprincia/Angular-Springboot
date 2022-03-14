@@ -1,0 +1,14 @@
+img{
+    height:300px;
+    width:425px;
+    border-radius: 10px;
+    overflow: hidden;
+    border-color:white;
+}
+body{
+    background-color:#eaebec !important;
+}
+#content{
+    position:absolute;
+    top:70px;
+}

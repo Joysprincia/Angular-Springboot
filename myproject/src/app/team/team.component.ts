@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Guide } from '../Guide';
+import { LoginformserviceService } from '../loginformservice.service';
 
 @Component({
   selector: 'app-team',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamComponent implements OnInit {
 
-  constructor() { }
+  guides!:Guide[];
+  constructor(private packService:LoginformserviceService) { }
 
   ngOnInit(): void {
+    this.getGuide();
+  }
+  private getGuide(){
+    this.packService.getGuideDetails().subscribe(data => {this.guides=data});
   }
 
 }

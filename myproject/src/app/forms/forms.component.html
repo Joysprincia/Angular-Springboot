@@ -5,7 +5,8 @@
             <tr><th colspan=2><h2><strong>Update Package</strong></h2></th></tr>
         <tr>
         <th><h4>Package Name</h4></th>
-        <td><input type="text" class="form-control" id="packagename" maxlength="30" [(ngModel)]="packages.package_name" name="pacakge_name"></td>
+        <td><input #pname="ngModel" required type="text" class="form-control" id="packagename" maxlength="30" [(ngModel)]="packages.package_name" name="pacakge_name"></td>
+        
         </tr>
         
         <tr>
@@ -21,7 +22,12 @@
         <tr>
         <th><h4>Price</h4></th>
         <td><input type="text" class="form-control" id="price" maxlength="30" [(ngModel)]="packages.package_price" name="package_price"></td>
-        </tr>  
+        </tr> 
+        
+        <tr>
+            <th><h4>Image Link</h4></th>
+            <td><input type="text" class="form-control" id="price" maxlength="30" [(ngModel)]="packages.pictures" name="pictures"></td>
+        </tr> 
         
         <tr>
         <td colspan=2 align="center">

@@ -19,7 +19,6 @@ import { AdminComponent } from './admin/admin.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { AddpackageComponent } from './admin/addpackage/addpackage.component';
 import { ViewpackageComponent } from './admin/viewpackage/viewpackage.component';
-import { UpdateformComponent } from './admin/viewpackage/updateform/updateform.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddguideComponent } from './admin/addguide/addguide.component';
 import { ViewguideComponent } from './admin/viewguide/viewguide.component';
@@ -31,8 +30,19 @@ import { FormloginComponent } from './formlogin/formlogin.component';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule } from '@angular/material/icon';
-import {MatInputModule} from '@angular/material/input'
-
+import {MatInputModule} from '@angular/material/input';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { TravellerComponent } from './traveller/traveller.component';
+import { SignupComponent } from './signup/signup.component';
+import {MatSelectModule} from '@angular/material/select';
+import { BookingformComponent } from './bookingform/bookingform.component';
+import {MatRadioModule} from '@angular/material/radio';
+import { SuccessComponent } from './success/success.component';
+import { AssignguideComponent } from './admin/assignguide/assignguide.component';
+import { UpdatebookingComponent } from './updatebooking/updatebooking.component';
+import { BookedlistComponent } from './admin/bookedlist/bookedlist.component';
+import { AssignedbookingComponent } from './admin/assignedbooking/assignedbooking.component';
+import { UpdateassignedComponent } from './updateassigned/updateassigned.component';
 
 @NgModule({
   declarations: [
@@ -49,11 +59,19 @@ import {MatInputModule} from '@angular/material/input'
     GalleryComponent,
     AddpackageComponent,
     ViewpackageComponent,
-    UpdateformComponent,
     AddguideComponent,
     ViewguideComponent,
     GuideformComponent,
-    FormloginComponent
+    FormloginComponent,
+    TravellerComponent,
+    SignupComponent,
+    BookingformComponent,
+    SuccessComponent,
+    AssignguideComponent,
+    UpdatebookingComponent,
+    BookedlistComponent,
+    AssignedbookingComponent,
+    UpdateassignedComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +87,10 @@ import {MatInputModule} from '@angular/material/input'
     MatDividerModule,
     MatFormFieldModule,
     MatIconModule,
-    MatInputModule
+    MatInputModule,
+    MDBBootstrapModule,
+    MatSelectModule,
+    MatRadioModule
     
   ],
   providers: [],
